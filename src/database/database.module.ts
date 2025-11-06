@@ -15,6 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         database: config.get<string>('POSTGRES_DB'),
         autoLoadEntities: true,
         synchronize: config.get<boolean>('TYPEORM_SYNC'),
+        migrationsRun: true,
       }),
       inject: [ConfigService],
     }),
