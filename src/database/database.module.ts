@@ -17,6 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: config.get<boolean>('TYPEORM_SYNC'),
         migrationsRun: true,
         ssl: {
+          require: true,
           rejectUnauthorized: false,
         },
       }),
